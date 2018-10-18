@@ -13,7 +13,7 @@ export default class AreaChart extends React.Component<DefaultProps> {
     const {value, uiParams} = this.props;
     const defaultUiParams = {
       style: {
-        data: {fill: "rgb(244, 81, 30)"},
+        data: {fill: "#0090ff"},
         labels: {fill: "white"}
       }
     }

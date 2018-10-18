@@ -8,12 +8,12 @@ import {VictoryChart, VictoryTheme, VictoryScatter, VictoryAxis, VictoryVoronoiC
 import {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/chart-utils';
 
-export default class AreaChart extends React.Component<DefaultProps> {
+export default class ScatterChart extends React.Component<DefaultProps> {
   render() {
     const {value, uiParams} = this.props;
     const defaultUiParams = {
       style: {
-        data: {fill: "rgb(244, 81, 30)"},
+        data: {fill: "#a257ec"},
         labels: {fill: "white"}
       }
     }

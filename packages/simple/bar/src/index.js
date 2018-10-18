@@ -22,7 +22,10 @@ export default class BarChart extends React.Component<DefaultProps> {
           data={value}
           labelComponent={<Tooltip/>}
           labels={(datum) => datum.y}
-          style={{labels: {fill: "white"}}}
+          style={{
+            labels: {fill: "white"},
+            data: {fill: "#0090ff"}
+          }}
           {...uiParams}
         />
       </VictoryChart>
