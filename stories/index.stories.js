@@ -1,19 +1,35 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import AreaDefaultDemo from './demo/areaDefault';
+import BarDefaultDemo from './demo/barDefault';
+import DonutDefaultDemo from './demo/donutDefault';
+import LineDefaultDemo from './demo/lineDefault';
+import PieDefaultDemo from './demo/pieDefault';
 
-import { Button, Welcome } from '@storybook/react/demo';
+const Container = storyFn => (
+  <div style={{padding: "20px", width: "500px", height: "400px"}}>
+    {storyFn()}
+  </div>
+);
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+storiesOf('Area Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <AreaDefaultDemo/>);
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+
+storiesOf('Bar Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <BarDefaultDemo/>);
+
+storiesOf('Line Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <LineDefaultDemo/>);
+
+storiesOf('Donut Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <DonutDefaultDemo/>);
+
+storiesOf('Pie Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <PieDefaultDemo/>);
