@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import ScatterChart from 'packages/scatter/src';
-import data from './data';
+import ScatterChart from 'packages/simple/scatter/src';
+import data from '../data';
 
 export default class ScatterDefaultDemo extends React.Component<{}> {
   render() {

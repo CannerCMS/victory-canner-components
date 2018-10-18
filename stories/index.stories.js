@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import AreaDefaultDemo from './demo/areaDefault';
-import BarDefaultDemo from './demo/barDefault';
-import DonutDefaultDemo from './demo/donutDefault';
-import LineDefaultDemo from './demo/lineDefault';
-import PieDefaultDemo from './demo/pieDefault';
-import ScatterDefaultDemo from './demo/scatterDefault';
+import AreaDemo from './demo/simple/area';
+import BarDemo from './demo/simple/bar';
+import DonutDemo from './demo/simple/donut';
+import LineDemo from './demo/simple/line';
+import PieDemo from './demo/simple/pie';
+import ScatterDemo from './demo/simple/scatter';
 
 const Container = storyFn => (
   <div style={{padding: "20px", width: "500px", height: "400px"}}>
@@ -16,25 +16,25 @@ const Container = storyFn => (
 
 storiesOf('Area Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <AreaDefaultDemo/>);
+  .add('Simple', () => <AreaDemo/>);
 
 
 storiesOf('Bar Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <BarDefaultDemo/>);
+  .add('Simple', () => <BarDemo/>);
 
 storiesOf('Line Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <LineDefaultDemo/>);
+  .add('Simple', () => <LineDemo/>);
 
 storiesOf('Donut Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <DonutDefaultDemo/>);
+  .add('Simple', () => <DonutDemo/>);
 
 storiesOf('Pie Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <PieDefaultDemo/>);
+  .add('Simple', () => <PieDemo/>);
 
 storiesOf('Scatter Chart', module)
   .addDecorator(Container)
-  .add('Default', () => <ScatterDefaultDemo/>);
+  .add('Simple', () => <ScatterDemo/>);

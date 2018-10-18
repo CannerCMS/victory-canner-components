@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import LineChart from 'packages/line/src';
-import data from './data';
+import LineChart from 'packages/simple/line/src';
+import data from '../data';
 
 export default class LineDefaultDemo extends React.Component<{}> {
   render() {

@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import BarChart from 'packages/bar/src';
-import data from './data';
+import BarChart from 'packages/simple/bar/src';
+import data from '../data';
 
 export default class BarDefaultDemo extends React.Component<{}> {
   render() {

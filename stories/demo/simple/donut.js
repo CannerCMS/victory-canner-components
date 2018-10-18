@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import DonutChart from 'packages/donut/src';
-import data from './data';
+import DonutChart from 'packages/simple/donut/src';
+import data from '../data';
 
 export default class DonutDefaultDemo extends React.Component<{}> {
   render() {

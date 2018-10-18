@@ -2,7 +2,7 @@
   "name": "canner-chart",
   "version": "10000.0.0",
   "workspaces": [
-    "packages/*"
+    "packages/**"
   ],
   "private": true,
   "devDependencies": {
