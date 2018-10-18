@@ -1,0 +1,63 @@
+{
+  "name": "canner-chart",
+  "version": "10000.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^3.4.11",
+    "@storybook/addon-links": "^3.4.11",
+    "@storybook/addon-options": "^3.4.10",
+    "@storybook/addons": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-import": "^1.9.1",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "express": "^4.16.2",
+    "flow-bin": "^0.66.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.1",
+    "jest": "^22.4.0",
+    "lerna": "^3.4.3",
+    "prettier": "^1.9.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "style-loader": "^0.20.2",
+    "styled-components": "^3.2.1",
+    "victory": "^30.5.0",
+    "babel-core": "^6.26.3"
+  },
+  "scripts": {
+    "lint": "prettier --write ./packages/*/src/**/*.js && eslint ./packages/*/src/**/*.js",
+    "build": "yarn run clear && gulp",
+    "build:watch": "gulp watch",
+    "clear": "lerna exec --parallel -- rm -rf lib",
+    "preversion": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "license": "Apache 2.0"
+}
