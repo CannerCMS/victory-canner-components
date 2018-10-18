@@ -6,6 +6,7 @@ import BarDefaultDemo from './demo/barDefault';
 import DonutDefaultDemo from './demo/donutDefault';
 import LineDefaultDemo from './demo/lineDefault';
 import PieDefaultDemo from './demo/pieDefault';
+import ScatterDefaultDemo from './demo/scatterDefault';
 
 const Container = storyFn => (
   <div style={{padding: "20px", width: "500px", height: "400px"}}>
@@ -33,3 +34,7 @@ storiesOf('Donut Chart', module)
 storiesOf('Pie Chart', module)
   .addDecorator(Container)
   .add('Default', () => <PieDefaultDemo/>);
+
+storiesOf('Scatter Chart', module)
+  .addDecorator(Container)
+  .add('Default', () => <ScatterDefaultDemo/>);

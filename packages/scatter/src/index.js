@@ -4,15 +4,16 @@
 
 import * as React from 'react';
 import {assign} from 'lodash';
-import {VictoryChart, VictoryTheme, VictoryLine, VictoryAxis, VictoryVoronoiContainer} from 'victory';
+import {VictoryChart, VictoryTheme, VictoryScatter, VictoryAxis, VictoryVoronoiContainer} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/chart-utils';
 
-export default class LineChart extends React.Component<DefaultProps> {
+export default class AreaChart extends React.Component<DefaultProps> {
   render() {
     const {value, uiParams} = this.props;
     const defaultUiParams = {
       style: {
+        data: {fill: "rgb(244, 81, 30)"},
         labels: {fill: "white"}
       }
     }
@@ -28,10 +29,10 @@ export default class LineChart extends React.Component<DefaultProps> {
       >
         <VictoryAxis/>
         <VictoryAxis dependentAxis/>
-        <VictoryLine
-          data={value}
+        <VictoryScatter
           labelComponent={<Tooltip/>}
           labels={(datum) => datum.y}
+          data={value}
           {...newUiParams}
         />
       </VictoryChart>
