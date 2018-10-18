@@ -4,8 +4,9 @@
 
 import * as React from 'react';
 import {assign} from 'lodash';
-import {VictoryChart, VictoryTheme, VictoryArea} from 'victory';
+import {VictoryChart, VictoryTheme, VictoryArea, VictoryAxis} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
+import {Tooltip} from '@canner/chart-utils';
 
 export default class AreaChart extends React.Component<DefaultProps> {
   render() {
@@ -22,7 +23,11 @@ export default class AreaChart extends React.Component<DefaultProps> {
       <VictoryChart
         theme={VictoryTheme.material}
       >
+        <VictoryAxis/>
+        <VictoryAxis dependentAxis/>
         <VictoryArea
+          labelComponent={<Tooltip/>}
+          labels={(datum) => datum.y}
           data={value}
           {...newUiParams}
         />
