@@ -1,6 +1,6 @@
 {
   "name": "@canner/victory-bar-stack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Canner bar-stack chart",
   "main": "lib/index.js",
   "scripts": {
