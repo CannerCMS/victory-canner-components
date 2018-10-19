@@ -26,7 +26,7 @@ All charts have one props called `value`. `value` is the data that send into the
 npm i --save @canner/victory-area
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryArea](https://formidable.com/open-source/victory/docs/victory-area/#props)
 
@@ -36,7 +36,7 @@ npm i --save @canner/victory-area
 npm i --save @canner/victory-bar
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryBar](https://formidable.com/open-source/victory/docs/victory-bar/#props)
 
@@ -46,7 +46,7 @@ npm i --save @canner/victory-bar
 npm i --save @canner/victory-donut
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryPie](https://formidable.com/open-source/victory/docs/victory-pie/#props)
 
@@ -56,7 +56,7 @@ npm i --save @canner/victory-donut
 npm i --save @canner/victory-line
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryLine](https://formidable.com/open-source/victory/docs/victory-line/#props)
 
@@ -66,7 +66,7 @@ npm i --save @canner/victory-line
 npm i --save @canner/victory-pie
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryPie](https://formidable.com/open-source/victory/docs/victory-pie/#props)
 
@@ -76,7 +76,7 @@ npm i --save @canner/victory-pie
 npm i --save @canner/victory-scatter
 ```
 
-#### Props
+#### Additional Props
 
 - `chart (object)`: chart settings, [learn more VictoryScatter](https://formidable.com/open-source/victory/docs/victory-scatter/#props)
 
@@ -90,7 +90,7 @@ Regarding to stack charts, the data in stack chart's data is like `array[array[o
 npm i --save @canner/victory-area-stack
 ```
 
-#### Props
+#### Additional Props
 
 - `legend (object)`: legend settings, [learn more VictoryLegend](https://formidable.com/open-source/victory/docs/victory-legend/#props)
 
@@ -102,7 +102,7 @@ npm i --save @canner/victory-area-stack
 npm i --save @canner/victory-bar-stack
 ```
 
-#### Props
+#### Additional Props
 
 - `legend (object)`: legend settings, [learn more VictoryLegend](https://formidable.com/open-source/victory/docs/victory-legend/#props)
 
