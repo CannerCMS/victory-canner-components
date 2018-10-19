@@ -1,6 +1,6 @@
 {
   "name": "@canner/victory-donut",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Canner donut chart",
   "main": "lib/index.js",
   "scripts": {

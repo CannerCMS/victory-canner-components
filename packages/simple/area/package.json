@@ -1,6 +1,6 @@
 {
   "name": "@canner/victory-area",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Canner area chart",
   "main": "lib/index.js",
   "scripts": {
