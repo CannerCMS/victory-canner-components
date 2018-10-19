@@ -1,5 +1,5 @@
 {
-  "name": "canner-chart",
+  "name": "victory-canner-components",
   "version": "10000.0.0",
   "workspaces": [
     "packages/**"

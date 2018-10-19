@@ -1,5 +1,5 @@
 {
-  "name": "@canner/line-chart",
+  "name": "@canner/victory-line",
   "version": "0.1.0",
   "description": "Canner line chart",
   "main": "lib/index.js",
@@ -13,5 +13,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "cda68b2fe54d03b2ef11f25b148c16b619778fdd"
 }
