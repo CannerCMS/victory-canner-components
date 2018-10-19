@@ -30,6 +30,7 @@ export default class AreaChart extends React.Component<DefaultProps> {
         <VictoryAxis dependentAxis/>
         <VictoryStack>
           <VictoryArea
+            animate={{duration: 500, delay: 100}}
             interpolation="natural"
             labelComponent={<Tooltip/>}
             labels={(datum) => datum.y}

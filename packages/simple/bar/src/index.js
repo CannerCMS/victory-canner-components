@@ -20,6 +20,7 @@ export default class BarChart extends React.Component<DefaultProps> {
         <VictoryAxis dependentAxis/>
         <VictoryStack>
           <VictoryBar
+            animate={{duration: 500}}
             data={value}
             labelComponent={<Tooltip/>}
             labels={(datum) => datum.y}

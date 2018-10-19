@@ -33,6 +33,7 @@ export default class BarStackChart extends React.Component<DefaultProps> {
             return (
               <VictoryBar
                 key={i}
+                animate={{duration: 500}}
                 data={barData}
                 labelComponent={<Tooltip/>}
                 labels={(datum) => datum.y}

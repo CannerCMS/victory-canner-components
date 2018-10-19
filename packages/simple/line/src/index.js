@@ -30,6 +30,7 @@ export default class LineChart extends React.Component<DefaultProps> {
         <VictoryAxis dependentAxis/>
         <VictoryLine
           data={value}
+          animate={{duration: 500}}
           labelComponent={<Tooltip/>}
           interpolation="natural"
           labels={(datum) => datum.y}

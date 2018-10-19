@@ -16,17 +16,6 @@ Chart library for [Canner](https://github.com/Canner/canner), based on [Victory 
 - Area Chart
 - Bar Chart
 
-## Group Charts
-
-- Bar Chart
-
-## Mini Charts
-
-- Area Chart
-- Line Chart
-- Bar Chart
-
-
 ## License
 
 MIT

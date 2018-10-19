@@ -39,6 +39,7 @@ export default class AreaChart extends React.Component<DefaultProps> {
           {value.map((areaData, i) => {
             return (
               <VictoryArea
+                animate={{duration: 500}}
                 interpolation="natural"
                 key={i}
                 labelComponent={<Tooltip/>}

@@ -22,6 +22,7 @@ export default class ScatterChart extends React.Component<DefaultProps> {
 
     return (
       <VictoryChart
+        animate={{ duration: 2000 }}
         theme={VictoryTheme.material}
         containerComponent={
           <VictoryVoronoiContainer/>

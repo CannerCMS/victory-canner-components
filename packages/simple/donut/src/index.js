@@ -16,6 +16,7 @@ export default class DonutChart extends React.Component<DefaultProps> {
 
     return (
       <VictoryPie
+        animate={true}
         innerRadius={80}
         theme={VictoryTheme.material}
         data={value}
