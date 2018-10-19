@@ -9,7 +9,12 @@ import data from '../data';
 export default class ScatterDefaultDemo extends React.Component<{}> {
   render() {
     return (
-      <ScatterChart value={data.data1}/>
+      <ScatterChart
+        uiParams={{
+          symbol: (datum) => datum.y > 3 ? "triangleUp" : "triangleDown",
+          size: 8
+        }}
+        value={data.data1}/>
     );
   }
 }

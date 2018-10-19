@@ -7,21 +7,25 @@ import DonutDemo from './demo/simple/donut';
 import LineDemo from './demo/simple/line';
 import PieDemo from './demo/simple/pie';
 import ScatterDemo from './demo/simple/scatter';
+import StackBarDemo from './demo/stack/bar';
+import StackAreaDemo from './demo/stack/area';
 
 const Container = storyFn => (
-  <div style={{padding: "20px", width: "500px", height: "400px"}}>
+  <div style={{padding: "20px", width: "600px", height: "400px"}}>
     {storyFn()}
   </div>
 );
 
 storiesOf('Area Chart', module)
   .addDecorator(Container)
-  .add('Simple', () => <AreaDemo/>);
+  .add('Simple', () => <AreaDemo/>)
+  .add('Stack', () => <StackAreaDemo/>);
 
 
 storiesOf('Bar Chart', module)
   .addDecorator(Container)
-  .add('Simple', () => <BarDemo/>);
+  .add('Simple', () => <BarDemo/>)
+  .add('Stack', () => <StackBarDemo/>);
 
 storiesOf('Line Chart', module)
   .addDecorator(Container)

@@ -1,7 +1,7 @@
 {
-  "name": "@canner/bar-stack-chart",
+  "name": "@canner/area-stack-chart",
   "version": "0.1.0",
-  "description": "Canner bar-stack chart",
+  "description": "Canner area-stack chart",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

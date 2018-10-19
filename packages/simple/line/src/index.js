@@ -31,6 +31,7 @@ export default class LineChart extends React.Component<DefaultProps> {
         <VictoryLine
           data={value}
           labelComponent={<Tooltip/>}
+          interpolation="natural"
           labels={(datum) => datum.y}
           {...newUiParams}
         />

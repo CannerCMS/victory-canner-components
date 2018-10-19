@@ -3,22 +3,29 @@
  */
 
 import * as React from 'react';
-import {VictoryChart, VictoryTheme, VictoryBar, VictoryAxis, VictoryStack, VictoryLegend} from 'victory';
+import {assign} from 'lodash';
+import {VictoryChart, VictoryTheme, VictoryArea, VictoryAxis, VictoryVoronoiContainer, VictoryStack, VictoryLegend} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/chart-utils';
 
-export default class BarStackChart extends React.Component<DefaultProps> {
-  static defaultProps = {
-    uiParams: {}
-  }
+export default class AreaChart extends React.Component<DefaultProps> {
 
   render() {
     const {value, uiParams} = this.props;
-  
+    const defaultUiParams = {
+      style: {
+        labels: {fill: "white"}
+      }
+    }
+
+    const newUiParams = assign(defaultUiParams, uiParams);
+
     return (
       <VictoryChart
         theme={VictoryTheme.material}
-        domainPadding={uiParams.domainPadding || 10}
+        containerComponent={
+          <VictoryVoronoiContainer/>
+        }
       >
         <VictoryAxis/>
         <VictoryAxis dependentAxis/>
@@ -26,20 +33,18 @@ export default class BarStackChart extends React.Component<DefaultProps> {
           orientation="horizontal"
           gutter={20}
           style={{ border: { stroke: "gray" } }}
-          data={uiParams.legendData}
+          data={newUiParams.legendData}
         />
         <VictoryStack>
-          {value.map((barData, i) => {
+          {value.map((areaData, i) => {
             return (
-              <VictoryBar
+              <VictoryArea
+                interpolation="natural"
                 key={i}
-                data={barData}
                 labelComponent={<Tooltip/>}
                 labels={(datum) => datum.y}
-                style={{
-                  labels: {fill: "white"}
-                }}
-                {...uiParams}
+                data={areaData}
+                {...newUiParams}
               />
             );
           })}

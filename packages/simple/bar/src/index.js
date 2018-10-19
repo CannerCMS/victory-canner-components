@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import {VictoryChart, VictoryTheme, VictoryBar, VictoryAxis} from 'victory';
+import {VictoryChart, VictoryTheme, VictoryBar, VictoryAxis, VictoryStack} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/chart-utils';
 
@@ -14,20 +14,21 @@ export default class BarChart extends React.Component<DefaultProps> {
     return (
       <VictoryChart
         theme={VictoryTheme.material}
-        domainPadding={(uiParams && uiParams.domainPadding) || 10}
+        domainPadding={(uiParams && uiParams.domainPadding) || 15}
       >
         <VictoryAxis/>
         <VictoryAxis dependentAxis/>
-        <VictoryBar
-          data={value}
-          labelComponent={<Tooltip/>}
-          labels={(datum) => datum.y}
-          style={{
-            labels: {fill: "white"},
-            data: {fill: "#0090ff"}
-          }}
-          {...uiParams}
-        />
+        <VictoryStack>
+          <VictoryBar
+            data={value}
+            labelComponent={<Tooltip/>}
+            labels={(datum) => datum.y}
+            style={{
+              labels: {fill: "white"}
+            }}
+            {...uiParams}
+          />
+        </VictoryStack>
       </VictoryChart>
     )
   }

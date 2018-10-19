@@ -17,6 +17,8 @@ export default class PieChart extends React.Component<DefaultProps> {
     return (
       <VictoryPie
         theme={VictoryTheme.material}
+        labelRadius={80}
+        style={{ labels: { fill: "white", fontSize: 20, fontWeight: "bold" } }}
         data={value}
         {...newUiParams}
       />
