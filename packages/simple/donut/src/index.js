@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import {VictoryTheme, VictoryPie} from 'victory';
-import {DefaultProps} from 'types/DefaultProps';
+import type {DefaultProps} from 'types/DefaultProps';
 
 export default class DonutChart extends React.Component<DefaultProps> {
   static defaultProps = {

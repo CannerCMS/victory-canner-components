@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import {VictoryChart, VictoryTheme, VictoryScatter, VictoryAxis, VictoryVoronoiContainer} from 'victory';
-import {DefaultProps} from 'types/DefaultProps';
+import type {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/victory-utils';
 
 export default class ScatterChart extends React.Component<DefaultProps> {

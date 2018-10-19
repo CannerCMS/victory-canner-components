@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import {VictoryChart, VictoryTheme, VictoryArea, VictoryAxis, VictoryVoronoiContainer, VictoryStack, VictoryLegend} from 'victory';
-import {DefaultProps} from 'types/DefaultProps';
+import type {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/victory-utils';
 
 export default class AreaChart extends React.Component<DefaultProps> {
