@@ -10,7 +10,7 @@ export default class ScatterDefaultDemo extends React.Component<{}> {
   render() {
     return (
       <ScatterChart
-        uiParams={{
+        chart={{
           symbol: (datum) => datum.y > 3 ? "triangleUp" : "triangleDown",
           size: 8
         }}

@@ -9,24 +9,17 @@ import {Tooltip} from '@canner/victory-utils';
 
 export default class AreaChart extends React.Component<DefaultProps> {
   render() {
-    const {value, uiParams} = this.props;
-    const defaultUiParams = {
-      style: {
-        labels: {fill: "white"}
-      }
-    }
-
-    const newUiParams = Object.assign(defaultUiParams, uiParams);
-
+    const {value, container, xAxis, yAxis, chart} = this.props;
     return (
       <VictoryChart
         theme={VictoryTheme.material}
         containerComponent={
           <VictoryVoronoiContainer/>
         }
+        {...container}
       >
-        <VictoryAxis/>
-        <VictoryAxis dependentAxis/>
+        <VictoryAxis {...xAxis}/>
+        <VictoryAxis {...yAxis} dependentAxis/>
         <VictoryStack>
           <VictoryArea
             animate={{duration: 500, delay: 100}}
@@ -34,7 +27,10 @@ export default class AreaChart extends React.Component<DefaultProps> {
             labelComponent={<Tooltip/>}
             labels={(datum) => datum.y}
             data={value}
-            {...newUiParams}
+            style={{
+              labels: {fill: "white"}
+            }}
+            {...chart}
           />
         </VictoryStack>
       </VictoryChart>

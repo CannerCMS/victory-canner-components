@@ -9,15 +9,7 @@ import {Tooltip} from '@canner/victory-utils';
 
 export default class ScatterChart extends React.Component<DefaultProps> {
   render() {
-    const {value, uiParams} = this.props;
-    const defaultUiParams = {
-      style: {
-        data: {fill: "#a257ec"},
-        labels: {fill: "white"}
-      }
-    }
-
-    const newUiParams = Object.assign(defaultUiParams, uiParams);
+    const {value, container, xAxis, yAxis, chart} = this.props;
 
     return (
       <VictoryChart
@@ -26,14 +18,19 @@ export default class ScatterChart extends React.Component<DefaultProps> {
         containerComponent={
           <VictoryVoronoiContainer/>
         }
+        {...container}
       >
-        <VictoryAxis/>
-        <VictoryAxis dependentAxis/>
+        <VictoryAxis {...xAxis}/>
+        <VictoryAxis {...yAxis} dependentAxis/>
         <VictoryScatter
           labelComponent={<Tooltip/>}
           labels={(datum) => datum.y}
           data={value}
-          {...newUiParams}
+          style={{
+            data: {fill: "#a257ec"},
+            labels: {fill: "white"}
+          }}
+          {...chart}
         />
       </VictoryChart>
     )

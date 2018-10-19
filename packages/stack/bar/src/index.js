@@ -8,25 +8,22 @@ import type {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/victory-utils';
 
 export default class BarStackChart extends React.Component<DefaultProps> {
-  static defaultProps = {
-    uiParams: {}
-  }
-
   render() {
-    const {value, uiParams} = this.props;
+    const {value, container, xAxis, yAxis, legend, chart} = this.props;
   
     return (
       <VictoryChart
         theme={VictoryTheme.material}
-        domainPadding={uiParams.domainPadding || 10}
+        domainPadding={10}
+        {...container}
       >
-        <VictoryAxis/>
-        <VictoryAxis dependentAxis/>
+        <VictoryAxis {...xAxis}/>
+        <VictoryAxis {...yAxis} dependentAxis/>
         <VictoryLegend x={20} y={10}
           orientation="horizontal"
           gutter={20}
           style={{ border: { stroke: "gray" } }}
-          data={uiParams.legendData}
+          {...legend}
         />
         <VictoryStack>
           {value.map((barData, i) => {
@@ -40,7 +37,7 @@ export default class BarStackChart extends React.Component<DefaultProps> {
                 style={{
                   labels: {fill: "white"}
                 }}
-                {...uiParams}
+                {...chart}
               />
             );
           })}

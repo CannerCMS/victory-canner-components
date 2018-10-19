@@ -10,14 +10,7 @@ import {Tooltip} from '@canner/victory-utils';
 export default class AreaChart extends React.Component<DefaultProps> {
 
   render() {
-    const {value, uiParams} = this.props;
-    const defaultUiParams = {
-      style: {
-        labels: {fill: "white"}
-      }
-    }
-
-    const newUiParams = Object.assign(defaultUiParams, uiParams);
+    const {value, container, xAxis, yAxis, legend, chart} = this.props;
 
     return (
       <VictoryChart
@@ -25,14 +18,15 @@ export default class AreaChart extends React.Component<DefaultProps> {
         containerComponent={
           <VictoryVoronoiContainer/>
         }
+        {...container}
       >
-        <VictoryAxis/>
-        <VictoryAxis dependentAxis/>
+        <VictoryAxis {...xAxis}/>
+        <VictoryAxis {...yAxis} dependentAxis/>
         <VictoryLegend x={20} y={10}
           orientation="horizontal"
           gutter={20}
           style={{ border: { stroke: "gray" } }}
-          data={newUiParams.legendData}
+          {...legend}
         />
         <VictoryStack>
           {value.map((areaData, i) => {
@@ -44,7 +38,10 @@ export default class AreaChart extends React.Component<DefaultProps> {
                 labelComponent={<Tooltip/>}
                 labels={(datum) => datum.y}
                 data={areaData}
-                {...newUiParams}
+                style={{
+                  labels: {fill: "white"}
+                }}
+                {...chart}
               />
             );
           })}

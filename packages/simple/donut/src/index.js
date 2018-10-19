@@ -7,15 +7,9 @@ import {VictoryTheme, VictoryPie} from 'victory';
 import type {DefaultProps} from 'types/DefaultProps';
 
 export default class DonutChart extends React.Component<DefaultProps> {
-  static defaultProps = {
-    uiParams: {}
-  }
 
   render() {
-    const {value, uiParams} = this.props;
-    const defaultUiParams = {
-    }
-    const newUiParams = Object.assign(defaultUiParams, uiParams);
+    const {value, chart} = this.props;
 
     return (
       <VictoryPie
@@ -23,7 +17,7 @@ export default class DonutChart extends React.Component<DefaultProps> {
         innerRadius={80}
         theme={VictoryTheme.material}
         data={value}
-        {...newUiParams}
+        {...chart}
       />
     )
   }

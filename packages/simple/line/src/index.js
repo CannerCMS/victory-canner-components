@@ -8,36 +8,29 @@ import type {DefaultProps} from 'types/DefaultProps';
 import {Tooltip} from '@canner/victory-utils';
 
 export default class LineChart extends React.Component<DefaultProps> {
-  static defaultProps = {
-    uiParams: {}
-  }
 
   render() {
-    const {value, uiParams} = this.props;
-    const defaultUiParams = {
-      style: {
-        labels: {fill: "white"}
-      }
-    }
-
-    const newUiParams = Object.assign(defaultUiParams, uiParams);
-
+    const {value, container, xAxis, yAxis, chart} = this.props;
     return (
       <VictoryChart
         theme={VictoryTheme.material}
         containerComponent={
           <VictoryVoronoiContainer/>
         }
+        {...container}
       >
-        <VictoryAxis/>
-        <VictoryAxis dependentAxis/>
+        <VictoryAxis {...xAxis}/>
+        <VictoryAxis {...yAxis} dependentAxis/>
         <VictoryLine
           data={value}
           animate={{duration: 500}}
           labelComponent={<Tooltip/>}
           interpolation="natural"
           labels={(datum) => datum.y}
-          {...newUiParams}
+          style={{
+            labels: {fill: "white"}
+          }}
+          {...chart}
         />
       </VictoryChart>
     )

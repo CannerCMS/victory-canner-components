@@ -4,73 +4,109 @@ Chart library for [Canner](https://github.com/Canner/canner), based on [Victory 
 
 > IMPORTANT NOTE: you need to additionally install `victory` in your project, because these packages use victory as peerDependencies.
 
+## Common Props
+
+All charts support common props as below
+
+- `container (object)`: Common Props to setup the chart, [learn more VictoryChart](https://formidable.com/open-source/victory/docs/common-props/)
+
+- `xAxis (object)`: X-Axis settings, [learn more Victory Axis](https://formidable.com/open-source/victory/docs/victory-axis)
+
+- `yAxis (object)`: Y-Axis settings, [learn more Victory Axis](https://formidable.com/open-source/victory/docs/victory-axis)
+
+Other than common props, every charts have additional settings for each chart, and is listed in each section below.
+
 ## Simple Charts
 
-All default charts have to basic props called `value` and `uiParams`. `value` is the data that send into the chart it is follow by the **[standard data in victory](https://formidable.com/open-source/victory/docs/common-props/#data)**, and `uiParams` are the other props that you want to pass into victory charts, while we have some default props for each chart but you could overwrite it by passing through props, such as `height`, `animate`, `categories`, etc...
+All charts have one props called `value`. `value` is the data that send into the chart it's format must followed by the **[standard data in victory](https://formidable.com/open-source/victory/docs/common-props/#data)**.
 
-- Area Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area.svg)](https://www.npmjs.com/package/@canner/victory-area)
+### Area Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area.svg)](https://www.npmjs.com/package/@canner/victory-area)
 
 ```
 npm i --save @canner/victory-area
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-area/)
+#### Props
 
-- Bar Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar.svg)](https://www.npmjs.com/package/@canner/victory-bar)
+- `chart (object)`: chart settings, [learn more VictoryArea](https://formidable.com/open-source/victory/docs/victory-area/#props)
+
+### Bar Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar.svg)](https://www.npmjs.com/package/@canner/victory-bar)
 
 ```
 npm i --save @canner/victory-bar
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-bar/)
+#### Props
 
-- Donut Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-donut.svg)](https://www.npmjs.com/package/@canner/victory-donut)
+- `chart (object)`: chart settings, [learn more VictoryBar](https://formidable.com/open-source/victory/docs/victory-bar/#props)
+
+### Donut Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-donut.svg)](https://www.npmjs.com/package/@canner/victory-donut)
 
 ```
 npm i --save @canner/victory-donut
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-pie/)
+#### Props
 
-- Line Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-line.svg)](https://www.npmjs.com/package/@canner/victory-line)
+- `chart (object)`: chart settings, [learn more VictoryPie](https://formidable.com/open-source/victory/docs/victory-pie/#props)
+
+### Line Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-line.svg)](https://www.npmjs.com/package/@canner/victory-line)
 
 ```
 npm i --save @canner/victory-line
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-line/)
+#### Props
 
-- Pie Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-pie.svg)](https://www.npmjs.com/package/@canner/victory-pie)
+- `chart (object)`: chart settings, [learn more VictoryLine](https://formidable.com/open-source/victory/docs/victory-line/#props)
+
+### Pie Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-pie.svg)](https://www.npmjs.com/package/@canner/victory-pie)
 
 ```
 npm i --save @canner/victory-pie
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-pie/)
+#### Props
 
-- Scatter Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-scatter.svg)](https://www.npmjs.com/package/@canner/victory-scatter)
+- `chart (object)`: chart settings, [learn more VictoryPie](https://formidable.com/open-source/victory/docs/victory-pie/#props)
+
+### Scatter Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-scatter.svg)](https://www.npmjs.com/package/@canner/victory-scatter)
 
 ```
 npm i --save @canner/victory-scatter
 ```
 
-(ref: https://formidable.com/open-source/victory/docs/victory-scatter/)
+#### Props
+
+- `chart (object)`: chart settings, [learn more VictoryScatter](https://formidable.com/open-source/victory/docs/victory-scatter/#props)
 
 ## Stack Charts
 
 Regarding to stack charts, the data in stack chart's data is like `array[array[object]]` data type. It is an array of **[standard data in victory](https://formidable.com/open-source/victory/docs/common-props/#data)**.
 
-- Area Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area-stack.svg)](https://www.npmjs.com/package/@canner/victory-area-stack)
+### Area Stack Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area-stack.svg)](https://www.npmjs.com/package/@canner/victory-area-stack)
 
 ```
 npm i --save @canner/victory-area-stack
 ```
 
-- Bar Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar-stack.svg)](https://www.npmjs.com/package/@canner/victory-bar-stack)
+#### Props
+
+- `legend (object)`: legend settings, [learn more VictoryLegend](https://formidable.com/open-source/victory/docs/victory-legend/#props)
+
+- `chart (object)`: chart settings, [learn more VictoryArea](https://formidable.com/open-source/victory/docs/victory-area/#props)
+
+### Bar Stack Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar-stack.svg)](https://www.npmjs.com/package/@canner/victory-bar-stack)
 
 ```
 npm i --save @canner/victory-bar-stack
 ```
+
+#### Props
+
+- `legend (object)`: legend settings, [learn more VictoryLegend](https://formidable.com/open-source/victory/docs/victory-legend/#props)
+
+- `chart (object)`: chart settings, [learn more VictoryBar](https://formidable.com/open-source/victory/docs/victory-bar/#props)
 
 ## License
 
