@@ -8,8 +8,8 @@ function loadStories() {
 }
 
 setOptions({
-  name: "canner-chart",
-  url: "https://github.com/Canner/canner-chart"
+  name: "victory-canner-components",
+  url: "https://github.com/Canner/victory-canner-components"
 });
 
 configure(loadStories, module);
