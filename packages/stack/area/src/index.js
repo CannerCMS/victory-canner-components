@@ -3,10 +3,9 @@
  */
 
 import * as React from 'react';
-import {assign} from 'lodash';
 import {VictoryChart, VictoryTheme, VictoryArea, VictoryAxis, VictoryVoronoiContainer, VictoryStack, VictoryLegend} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
-import {Tooltip} from '@canner/chart-utils';
+import {Tooltip} from '@canner/victory-utils';
 
 export default class AreaChart extends React.Component<DefaultProps> {
 
@@ -18,7 +17,7 @@ export default class AreaChart extends React.Component<DefaultProps> {
       }
     }
 
-    const newUiParams = assign(defaultUiParams, uiParams);
+    const newUiParams = Object.assign(defaultUiParams, uiParams);
 
     return (
       <VictoryChart

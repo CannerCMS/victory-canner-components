@@ -3,7 +3,6 @@
  */
 
 import * as React from 'react';
-import {assign} from 'lodash';
 import {VictoryTheme, VictoryPie} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
 
@@ -12,7 +11,7 @@ export default class PieChart extends React.Component<DefaultProps> {
     const {value, uiParams} = this.props;
     const defaultUiParams = {
     }
-    const newUiParams = assign(defaultUiParams, uiParams);
+    const newUiParams = Object.assign(defaultUiParams, uiParams);
 
     return (
       <VictoryPie

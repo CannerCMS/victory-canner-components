@@ -5,7 +5,7 @@
 import * as React from 'react';
 import {VictoryChart, VictoryTheme, VictoryBar, VictoryAxis, VictoryStack, VictoryLegend} from 'victory';
 import {DefaultProps} from 'types/DefaultProps';
-import {Tooltip} from '@canner/chart-utils';
+import {Tooltip} from '@canner/victory-utils';
 
 export default class BarStackChart extends React.Component<DefaultProps> {
   static defaultProps = {

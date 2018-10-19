@@ -14,5 +14,8 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@canner/victory-utils": "^0.1.1"
+  },
   "gitHead": "cda68b2fe54d03b2ef11f25b148c16b619778fdd"
 }
