@@ -6,7 +6,7 @@ Chart library for [Canner](https://github.com/Canner/canner), based on [Victory 
 
 All default charts have to basic props called `value` and `uiParams`. `value` is the data that send into the chart it is follow by the **[standard data in victory](https://formidable.com/open-source/victory/docs/common-props/#data)**, and `uiParams` are the other props that you want to pass into victory charts, while we have some default props for each chart but you could overwrite it by passing through props, such as `height`, `animate`, `categories`, etc...
 
-- Area Chart [![npm-image](https://badge.fury.io/js/@canner/victory-area.svg)](https://www.npmjs.com/package/@canner/victory-area)
+- Area Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area.svg)](https://www.npmjs.com/package/@canner/victory-area)
 
 ```
 npm i --save @canner/victory-area
@@ -14,7 +14,7 @@ npm i --save @canner/victory-area
 
 (ref: https://formidable.com/open-source/victory/docs/victory-area/)
 
-- Bar Chart [![npm-image](https://badge.fury.io/js/@canner/victory-bar.svg)](https://www.npmjs.com/package/@canner/victory-bar)
+- Bar Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar.svg)](https://www.npmjs.com/package/@canner/victory-bar)
 
 ```
 npm i --save @canner/victory-bar
@@ -22,7 +22,7 @@ npm i --save @canner/victory-bar
 
 (ref: https://formidable.com/open-source/victory/docs/victory-bar/)
 
-- Donut Chart [![npm-image](https://badge.fury.io/js/@canner/victory-donut.svg)](https://www.npmjs.com/package/@canner/victory-donut)
+- Donut Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-donut.svg)](https://www.npmjs.com/package/@canner/victory-donut)
 
 ```
 npm i --save @canner/victory-donut
@@ -30,7 +30,7 @@ npm i --save @canner/victory-donut
 
 (ref: https://formidable.com/open-source/victory/docs/victory-pie/)
 
-- Line Chart [![npm-image](https://badge.fury.io/js/@canner/victory-line.svg)](https://www.npmjs.com/package/@canner/victory-line)
+- Line Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-line.svg)](https://www.npmjs.com/package/@canner/victory-line)
 
 ```
 npm i --save @canner/victory-line
@@ -38,7 +38,7 @@ npm i --save @canner/victory-line
 
 (ref: https://formidable.com/open-source/victory/docs/victory-line/)
 
-- Pie Chart [![npm-image](https://badge.fury.io/js/@canner/victory-pie.svg)](https://www.npmjs.com/package/@canner/victory-pie)
+- Pie Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-pie.svg)](https://www.npmjs.com/package/@canner/victory-pie)
 
 ```
 npm i --save @canner/victory-pie
@@ -46,7 +46,7 @@ npm i --save @canner/victory-pie
 
 (ref: https://formidable.com/open-source/victory/docs/victory-pie/)
 
-- Scatter Chart [![npm-image](https://badge.fury.io/js/@canner/victory-scatter.svg)](https://www.npmjs.com/package/@canner/victory-scatter)
+- Scatter Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-scatter.svg)](https://www.npmjs.com/package/@canner/victory-scatter)
 
 ```
 npm i --save @canner/victory-scatter
@@ -58,13 +58,13 @@ npm i --save @canner/victory-scatter
 
 Regarding to stack charts, the data in stack chart's data is like `array[array[object]]` data type. It is an array of **[standard data in victory](https://formidable.com/open-source/victory/docs/common-props/#data)**.
 
-- Area Chart [![npm-image](https://badge.fury.io/js/@canner/victory-area-stack.svg)](https://www.npmjs.com/package/@canner/victory-area-stack)
+- Area Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-area-stack.svg)](https://www.npmjs.com/package/@canner/victory-area-stack)
 
 ```
 npm i --save @canner/victory-area-stack
 ```
 
-- Bar Chart [![npm-image](https://badge.fury.io/js/@canner/victory-bar-stack.svg)](https://www.npmjs.com/package/@canner/victory-bar-stack)
+- Bar Chart [![npm-image](https://badge.fury.io/js/%40canner%2Fvictory-bar-stack.svg)](https://www.npmjs.com/package/@canner/victory-bar-stack)
 
 ```
 npm i --save @canner/victory-bar-stack
