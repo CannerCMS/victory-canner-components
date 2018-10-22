@@ -4,6 +4,18 @@ Chart library for [Canner](https://github.com/Canner/canner), based on [Victory 
 
 > IMPORTANT NOTE: you need to additionally install `victory` in your project, because these packages use victory as peerDependencies.
 
+## Usage in [Canner](https://www.canner.io)
+
+You have to use `<component/>` tag to use charts in Canner. [Learn more](https://www.canner.io/docs/schema-page-tags#lt-component-gt)
+
+```jsx
+<component
+  packageName="@canner/victory-area"
+  graphql="<your graphql schema>"
+  {...custom props}
+  />
+```
+
 ## Common Props
 
 All charts support common props as below
